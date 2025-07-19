@@ -1,21 +1,19 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import MainLayout from './components/MainLayout'
-import HomePage from './pages/HomePage'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MainLayout from "./components/MainLayout";
+import HomePage from "./pages/HomePage";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        console.log('passed1')
-        <Route path='/' element={<MainLayout />}>
-          console.log('passed2')
+        <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
-          console.log('passed3')
-
+          <Route path="chats/:chat_uid" element={<HomePage />} />
+          <Route path="chats/new" element={<HomePage />} />
         </Route>
       </Routes>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;
