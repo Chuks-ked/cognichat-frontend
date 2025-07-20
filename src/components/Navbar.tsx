@@ -32,7 +32,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-4">
                     <SidebarTrigger />
                     <span className="text-xl font-bold tracking-tight">
-                        <span className="text-primary">Prompt</span>ify
+                        <span className="text-primary">Cogni</span>chat
                     </span>
                 </div>
 
