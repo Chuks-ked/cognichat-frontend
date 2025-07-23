@@ -8,7 +8,8 @@ const api = axios.create({
 
 export async function promptGPT(data: { chat_id: string; content: string }) {
     try {
-        const response = await api.post("/prompt_gpt/", data);
+        const response = await api.post("/prompt_gemini/", data);
+        // const response = await api.post("/prompt_gpt/", data);
         return response.data;
     } catch (err: unknown) {
         if (err instanceof Error) {
